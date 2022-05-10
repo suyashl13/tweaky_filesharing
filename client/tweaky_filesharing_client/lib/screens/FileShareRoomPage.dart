@@ -75,7 +75,10 @@ class _FileShareRoomPageState extends State<FileShareRoomPage> {
               child: MaterialButton(
                 onPressed: () {
                   showModalBottomSheet(
-                      context: context, builder: (context) => BottomSender());
+                      context: context,
+                      builder: (context) => BottomSender(
+                            roomName: roomName,
+                          ));
                 },
                 textColor: Colors.white,
                 color: Colors.green,

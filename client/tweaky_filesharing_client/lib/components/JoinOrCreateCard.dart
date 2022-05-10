@@ -42,7 +42,7 @@ class _JoinOrCreateCardState extends State<JoinOrCreateCard> {
             child: MaterialButton(
               textColor: Colors.white,
               onPressed: () async {
-                await RoomConnectHelper().createRoomAndConnect(_roomName,
+                await RoomConnectHelper.createRoomAndConnect(_roomName,
                     (res) {
                   Navigator.of(context).push(MaterialPageRoute(
                       builder: (_) =>
@@ -63,7 +63,7 @@ class _JoinOrCreateCardState extends State<JoinOrCreateCard> {
             child: MaterialButton(
               textColor: Colors.white,
               onPressed: () async {
-                await RoomConnectHelper().joinRoom(_roomName, (res) {
+                await RoomConnectHelper.joinRoom(_roomName, (res) {
                   Provider.of<RoomHistory>(context, listen: false)
                       .setRoomHistory(res);
                   Navigator.of(context).push(MaterialPageRoute(

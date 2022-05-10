@@ -1,4 +1,5 @@
-const FileMessageRouter = require('./file_message/FileMessageRouter')
+
+const FileMessageRouter = require('./room/FileMessageRouter')
 const RoomRouter = require('./room/RoomRouter')
 const BaseRouter = require('express').Router()
 
