@@ -31,7 +31,7 @@ RoomRouter.post('/', async (req, res, next) => {
 RoomRouter.get('/:room', async (req, res, next) => {
     try {
 
-        return res.json((await FileMessageModel.find({ room: (await ChatRoomModel.findOne({name: req.params.room}))._id })))
+        return res.json((await FileMessageModel.findOne({ room: (await ChatRoomModel.findOne({name: req.params.room}))._id })))
     } catch (error) {
         console.log(error)
         return res.status(401)
